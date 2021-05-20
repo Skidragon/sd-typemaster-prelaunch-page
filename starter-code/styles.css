@@ -1,0 +1,44 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  font-family: sans-serif;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  padding: 0 15vw;
+  width: 100%;
+}
+.header__content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.jumbotron {
+  display: flex;
+  flex-wrap: wrap;
+  flex: 1 1 50%;
+}
+.image-keyboard {
+  position: relative;
+}
+.image-keyboard::after {
+  content: "";
+  background: url("./assets/shared/pattern-square.svg");
+  background-repeat: no-repeat;
+  position: absolute;
+  z-index: 1000;
+  right: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+}
