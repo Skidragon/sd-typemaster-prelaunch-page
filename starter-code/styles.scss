@@ -53,13 +53,15 @@ img {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+
+  & > * {
+    flex: 1 1 basis;
+  }
+  & > * + * {
+    margin-left: 6px;
+  }
 }
-.even-columns > * {
-  flex: 1 1 basis;
-}
-.even-columns > * + * {
-  margin-left: 6px;
-}
+
 /* Component Classes */
 .primary-btn {
   display: inline-block;
@@ -91,27 +93,24 @@ img {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 50%;
-}
-.jumbotron .cta-container {
-  align-items: baseline;
-}
-.jumbotron .cta-container div {
-  font-weight: 700;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-.jumbotron img {
-  width: 100%;
+  & .cta-container {
+    align-items: baseline;
+  }
+  & .cta-container div {
+    font-weight: 700;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  & img {
+    width: 100%;
+  }
 }
 
-.image-keyboard {
-  position: relative;
-}
 .card {
   text-align: center;
   width: 32ch;
-}
-.card img {
-  width: 30%;
-  margin-bottom: 3rem;
+  & img {
+    width: 30%;
+    margin-bottom: 3rem;
+  }
 }
