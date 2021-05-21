@@ -1,0 +1,28 @@
+{
+  "name": "typemaster-pre-launch-landing-page",
+  "version": "1.0.0",
+  "description": "![Design preview for the Typemaster pre-launch landing page  coding challenge](./preview.jpg)",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skidragon/sd-typemaster-prelaunch-page.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Skidragon/sd-typemaster-prelaunch-page/issues"
+  },
+  "homepage": "https://github.com/Skidragon/sd-typemaster-prelaunch-page#readme",
+  "devDependencies": {
+    "snowpack": "^3.5.1"
+  },
+  "dependencies": {
+    "@snowpack/plugin-sass": "^1.4.0"
+  }
+}
