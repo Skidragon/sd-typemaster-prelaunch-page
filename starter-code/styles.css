@@ -1,3 +1,4 @@
+/* Global Styles */
 *,
 *::before,
 *::after {
@@ -10,9 +11,9 @@
   --orange: #f16718;
   --white: #f8f8f8;
   --light-grey: #e8eff2;
+  font-size: 16px;
 }
 html {
-  font-size: 16px;
   font-family: "Barlow", sans-serif;
   font-weight: 500;
   color: var(--pale-blue);
@@ -40,17 +41,26 @@ h3 {
 p {
   line-height: 1.5;
 }
+img {
+  border-radius: 12px;
+}
+/* Layout Classes */
 .container {
-  padding: 0 5vw;
+  padding: 0 7vw;
   width: 100%;
 }
-.header__content {
+.even-columns {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  width: 100%;
-  padding: 2em 0;
 }
-
+.even-columns > * {
+  flex: 1 1 basis;
+}
+.even-columns > * + * {
+  margin-left: 6px;
+}
+/* Component Classes */
 .primary-btn {
   display: inline-block;
   background: var(--orange);
@@ -69,19 +79,14 @@ p {
   text-transform: uppercase;
   text-decoration: none;
 }
-img {
-  border-radius: 12px;
-}
-.even-columns {
+/* Sections from Top to Bottom  */
+.header__content {
   display: flex;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2em 0;
 }
-.even-columns > * {
-  flex: 1 1 basis;
-}
-.even-columns > * + * {
-  margin-left: 6px;
-}
+
 .jumbotron {
   display: flex;
   flex-wrap: wrap;
@@ -90,9 +95,15 @@ img {
 .jumbotron .cta-container {
   align-items: baseline;
 }
+.jumbotron .cta-container div {
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
 .jumbotron img {
   width: 100%;
 }
+
 .image-keyboard {
   position: relative;
 }
