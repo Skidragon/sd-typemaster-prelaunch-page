@@ -1,7 +1,7 @@
 /** @type {import("snowpack").SnowpackUserConfig } */
 export default {
   plugins: ["@snowpack/plugin-sass"],
-  https://www.snowpack.dev/guides/routing#scenario-1%3A-spa-fallback-paths
+  // https://www.snowpack.dev/guides/routing#scenario-1%3A-spa-fallback-paths
   routes: [{ match: "routes", src: ".*", dest: "/starter-code/index.html" }],
   optimize: {
     /* Example: Bundle your final build: */
