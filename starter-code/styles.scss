@@ -1,5 +1,5 @@
-$tablet: 500px;
-$desktop: 800px;
+$tablet: 768px;
+$desktop: 1440px;
 $sm-space: 1rem;
 $md-space: 2rem;
 $lg-space: 3rem;
@@ -47,6 +47,7 @@ html {
 body {
   display: flex;
   flex-flow: column;
+  align-items: center;
   min-height: 100vh;
   margin: 0;
   padding: 0;
@@ -114,7 +115,7 @@ img {
 section.jumbotron {
   display: flex;
   flex-wrap: wrap;
-  flex: 1 1 50%;
+  flex: 1 1 100%;
   & .cta-container {
     display: flex;
     justify-content: space-between;
