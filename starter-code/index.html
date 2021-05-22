@@ -101,6 +101,14 @@
   <!-- <svg class="square">
     <use href="#square"></use>
   </svg> -->
+  <script type="module">
+    window.scrollTo({
+      top: localStorage.getItem('y')
+    })
+    window.addEventListener("scroll", () => {
+      localStorage.setItem("y", window.scrollY);
+    })
+  </script>
 </body>
 
 </html>
