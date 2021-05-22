@@ -48,10 +48,9 @@ body {
   display: flex;
   flex-flow: column;
   align-items: center;
-  min-height: 100vh;
   margin: 0;
   padding: 0;
-  // overflow-x: hidden;
+  overflow-x: hidden;
   max-width: 1200px;
 }
 h1,
@@ -74,6 +73,7 @@ p {
   line-height: 1.5;
 }
 img {
+  display: inline-block;
   border-radius: 12px;
 }
 /* Layout Classes */
@@ -112,10 +112,11 @@ img {
   padding: 2em 0;
 }
 
-section.jumbotron {
+section.hero {
   display: flex;
   flex-wrap: wrap;
   flex: 1 1 100%;
+
   & .cta-container {
     display: flex;
     justify-content: space-between;
@@ -127,8 +128,11 @@ section.jumbotron {
     font-size: 1.2rem;
     text-transform: uppercase;
   }
-  & .image-keyboard img {
+  img {
     width: 100%;
+  }
+  & picture {
+    margin-right: -$lg-space;
   }
 }
 section.more-photos {
@@ -136,11 +140,10 @@ section.more-photos {
   flex-flow: row-reverse;
   justify-content: space-between;
   img {
-    display: inline-block;
     width: 100%;
-    height: 100%;
   }
   picture:last-child {
+    margin-left: -$lg-space;
     margin-right: $sm-space;
   }
 }
@@ -170,31 +173,3 @@ footer {
   padding: 3em;
   margin-top: auto;
 }
-
-// section.more-photos {
-//   display: flex;
-//   flex-flow: row-reverse;
-//   flex: 1 1 100%;
-//   width: 100%;
-//   overflow: scroll;
-//   picture {
-//     display: flex;
-//     align-items: stretch;
-//     & img {
-//       display: inline-block;
-//       width: 100%;
-//     }
-//     &:first-child {
-//       flex: 1 1 70%;
-//     }
-//     &:last-child {
-//       position: relative;
-//       flex: 1 1 50%;
-//       img {
-//         position: absolute;
-//         height: 100%;
-//         right: 3rem;
-//       }
-//     }
-//   }
-// }
