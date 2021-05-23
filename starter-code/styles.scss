@@ -107,6 +107,7 @@ img {
   &:hover {
     background: var(--dark-blue);
     color: var(--white);
+    filter: brightness(150%);
   }
 }
 
