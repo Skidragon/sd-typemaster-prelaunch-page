@@ -4,6 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
   <link rel="stylesheet" href="/starter-code/styles.css">
@@ -38,23 +39,21 @@
       <img src="/starter-code/assets/desktop/image-keyboard.jpg" alt="keyboard" />
     </picture>
   </section> <!-- /hero -->
-  <section class="more-photos container">
-    <picture class="image-glass-and-keyboard">
-      <source srcset="/starter-code/assets/desktop/image-glass-and-keyboard.jpg" media="(min-width: 800px)" />
-      <source srcset="/starter-code/assets/tablet/image-glass-and-keyboard.jpg" media="(min-width: 500px)" />
-      <source srcset="/starter-code/assets/mobile/image-glass-and-keyboard.jpg" />
-      <img src="/starter-code/assets/desktop/image-glass-and-keyboard.jpg" alt="keyboard" />
-    </picture>
-    <picture class="image-phone-and-keyboard">
-      <source srcset="/starter-code/assets/desktop/image-phone-and-keyboard.jpg" media="(min-width: 800px)" />
-      <source srcset="/starter-code/assets/tablet/image-phone-and-keyboard.jpg" media="(min-width: 500px)" />
-      <source srcset="/starter-code/assets/mobile/image-phone-and-keyboard.jpg" />
-      <img src="/starter-code/assets/desktop/image-phone-and-keyboard.jpg" alt="keyboard" />
-    </picture>
-  </section> <!-- /more-photos -->
-
-
-  <section class="container mechanical-keyboard">
+  <section class="mechanical-keyboard container">
+    <div class="pictures">
+      <picture class="image-glass-and-keyboard">
+        <source srcset="/starter-code/assets/desktop/image-glass-and-keyboard.jpg" media="(min-width: 800px)" />
+        <source srcset="/starter-code/assets/tablet/image-glass-and-keyboard.jpg" media="(min-width: 500px)" />
+        <source srcset="/starter-code/assets/mobile/image-glass-and-keyboard.jpg" />
+        <img src="/starter-code/assets/desktop/image-glass-and-keyboard.jpg" alt="keyboard" />
+      </picture>
+      <picture class="image-phone-and-keyboard">
+        <source srcset="/starter-code/assets/desktop/image-phone-and-keyboard.jpg" media="(min-width: 800px)" />
+        <source srcset="/starter-code/assets/tablet/image-phone-and-keyboard.jpg" media="(min-width: 500px)" />
+        <source srcset="/starter-code/assets/mobile/image-phone-and-keyboard.jpg" />
+        <img src="/starter-code/assets/desktop/image-phone-and-keyboard.jpg" alt="keyboard" />
+      </picture>
+    </div> <!-- /pictures -->
     <div class="content">
       <h2>Mechanical Wireless Keyboard</h2>
       <p>
@@ -63,6 +62,7 @@
       </p>
     </div>
   </section> <!-- /mechanical-keyboard -->
+
   <section class="container information-highlights">
     <div class="card">
       <img class="card__img" src="/starter-code/assets/shared/icon-compatible.svg" alt="" />
