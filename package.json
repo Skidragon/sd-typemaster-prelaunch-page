@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Skidragon/sd-typemaster-prelaunch-page#readme",
   "devDependencies": {
+    "@snowpack/plugin-webpack": "^2.3.1",
     "snowpack": "^3.5.1"
   },
   "dependencies": {

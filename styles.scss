@@ -148,7 +148,7 @@ section.hero {
   @media screen and (min-width: $desktop) {
     &::after {
       content: "";
-      background: url("/starter-code/assets/shared/pattern-square.svg");
+      background: url("assets/shared/pattern-square.svg");
       background-size: cover;
       position: absolute;
       top: 0;
@@ -208,7 +208,7 @@ section.mechanical-keyboard {
     flex-wrap: nowrap;
     ::before {
       content: "";
-      background: url("/starter-code/assets/shared/pattern-square.svg");
+      background: url("assets/shared/pattern-square.svg");
       background-size: cover;
       position: absolute;
       width: 300px;
