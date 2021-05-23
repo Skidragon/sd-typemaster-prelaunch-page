@@ -9,6 +9,8 @@ $lg-space: 3rem;
   border-radius: 5px;
   text-transform: uppercase;
   text-decoration: none;
+  font-weight: 700;
+  transition: all 100ms ease-in;
 }
 %even-columns {
   display: flex;
@@ -52,6 +54,7 @@ body {
   overflow-x: hidden;
   max-width: 1440px;
 }
+
 h1,
 h2,
 h3 {
@@ -88,12 +91,25 @@ img {
   @extend %btn;
   background: var(--orange);
   color: var(--white);
+  &:focus,
+  &:hover {
+    filter: brightness(150%);
+  }
+  &:focus {
+    outline: 2px solid var(--dark-blue);
+  }
 }
 .secondary-btn {
   @extend %btn;
   background: var(--light-pale-blue);
   color: var(--dark-blue);
+  &:focus,
+  &:hover {
+    background: var(--dark-blue);
+    color: var(--white);
+  }
 }
+
 .card {
   text-align: center;
   width: 32ch;
@@ -144,9 +160,23 @@ section.hero {
   }
   img {
     width: 100%;
+    height: 100%;
   }
   & picture {
     margin-right: -$lg-space;
+    position: relative;
+
+    &::after {
+      content: "";
+      background: url("/starter-code/assets/shared/pattern-square.svg");
+      background-size: cover;
+      position: absolute;
+      right: 0;
+      transform: translateX(calc(100% + #{$md-space})) rotate(-90deg);
+      height: 50%;
+      width: 50%;
+      z-index: 100;
+    }
     @media screen and (min-width: $tablet) {
       margin-left: $lg-space;
     }
@@ -159,7 +189,7 @@ section.mechanical-keyboard {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin-bottom: calc(#{$lg-space} * 4);
+  margin-bottom: calc(#{$lg-space} * 2);
   & > *:last-child {
     margin-left: $sm-space;
   }
@@ -187,8 +217,8 @@ section.mechanical-keyboard {
       margin-right: $sm-space;
       position: relative;
       filter: contrast(1.75);
-
-      ::before {
+      // Creates the foreground overlay
+      ::after {
         content: "";
         position: absolute;
         top: 0;
@@ -198,8 +228,22 @@ section.mechanical-keyboard {
         opacity: 0.3;
         border-radius: 12px;
       }
+
       @media screen and (min-width: $tablet) {
         margin-left: 0;
+      }
+      @media screen and (min-width: $desktop) {
+        &::before {
+          content: "";
+          background: url("/starter-code/assets/shared/pattern-square.svg");
+          background-size: cover;
+          position: absolute;
+          left: 0;
+          transform: translateX(-100%) rotate(180deg);
+          height: 50%;
+          width: 50%;
+          z-index: 100;
+        }
       }
     }
     @media screen and (min-width: $desktop) {
@@ -251,6 +295,16 @@ section.information-highlights {
   }
   & .card {
     margin-bottom: $lg-space;
+    transform: rotate(0deg);
+    cursor: pointer;
+    transition: transform 100ms ease-in, border-bottom 250ms ease-in,
+      box-shadow 100ms ease-in;
+  }
+  .card:focus,
+  .card:hover {
+    transform: translateY(-1rem);
+    border-bottom: 4px solid var(--orange);
+    box-shadow: 12px 12px 2px 1px rgba(255, 111, 0, 0.1);
   }
 
   & .card img {
